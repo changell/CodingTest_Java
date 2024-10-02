@@ -25,7 +25,7 @@ class Solution {
             int[] nextValues = {currentValue + n, currentValue * 2, currentValue * 3};
             
             for (int nextValue : nextValues) {
-                // 범위를 벗어나지 않고, 아직 방문하지 않은 값이라면 큐에 추가
+                // if 범위를 벗어나지 않고, 아직 방문하지 않은 값인지 여부
                 if (nextValue <= y && !visited[nextValue]) {
                     visited[nextValue] = true;
                     queue.add(new int[]{nextValue, answer + 1});
